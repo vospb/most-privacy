@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'">
+<title>Мост: политика конфиденциальности</title>
+<style>
+:root { color-scheme: light dark; --text: #1d1d1f; --muted: #636368; --page: #f2f2f7; --group: #ffffff; }
+@media (prefers-color-scheme: dark) { :root { --text: #f5f5f7; --muted: #a1a1a6; --page: #1c1c1e; --group: #2c2c2e; } }
+body { margin: 0; background: var(--page); color: var(--text); font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 32px 20px 48px; }
+section { background: var(--group); border-radius: 12px; padding: 20px 22px; margin-bottom: 20px; }
+h1 { font-size: 24px; margin: 0 0 8px; }
+h2 { font-size: 17px; margin: 18px 0 6px; }
+p, li { margin: 0 0 8px; }
+.muted { color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+<section lang="ru">
+  <h1>Мост: политика конфиденциальности</h1>
+  <p class="muted">Действует с 30 октября 2026 года. Относится к расширению «Мост» для Chrome и Яндекс Браузера и к модулю Моста для macOS.</p>
+
+  <h2>Что Мост обрабатывает</h2>
+  <p>Профили, которые вы добавили сами: название, адрес и порт сервера, IP сервера, логин, пароль, ключи WireGuard и AmneziaWG, закрытый ключ SSH и его фразу-пароль, отпечаток ключа SSH-сервера.</p>
+  <p>Профили хранятся на этом Mac одним элементом в Связке ключей macOS. Записывает и читает их локальный модуль Моста. Расширение хранит в браузере только два значения: включён ли Мост и какой профиль был последним.</p>
+
+  <h2>Что уходит в сеть</h2>
+  <ul>
+    <li>Трафик вкладок к серверу, который вы выбрали, пока Мост включён.</li>
+    <li>Проверочный запрос к https://example.com/ через этот же сервер, когда вы проверяете связь, и один раз после включения.</li>
+    <li>Запрос ключа SSH-сервера по адресу, который вы ввели, когда вы нажимаете «Получить отпечаток сервера».</li>
+  </ul>
+  <p>Больше Мост никуда не обращается: нет аналитики, телеметрии, проверки обновлений и наших серверов.</p>
+
+  <h2>Кому передаются данные</h2>
+  <p>Никому. Разработчик данные не получает, третьим лицам они не передаются и не продаются. Страну сервера Мост определяет по встроенной базе DB-IP без сетевых запросов.</p>
+
+  <h2>Как удалить данные</h2>
+  <p>Удалите профили на странице Моста или элемент «Мост — профили браузера» в программе «Связка ключей». Расширение удаляется из браузера обычным способом, его настройки удалятся вместе с ним.</p>
+
+  <h2>Связь</h2>
+  <p>Вопросы о данных: marshchekov@gmail.com</p>
+</section>
+
+<section lang="en">
+  <h1>Мост: privacy policy</h1>
+  <p class="muted">Effective October 30, 2026. Covers the Мост extension for Chrome and Yandex Browser and the Мост app for macOS.</p>
+
+  <h2>What Мост handles</h2>
+  <p>The profiles you add yourself: name, server address and port, server IP, login, password, WireGuard and AmneziaWG keys, SSH private key and its passphrase, SSH server key fingerprint.</p>
+  <p>Profiles are stored on this Mac as one item in the macOS Keychain, written and read by the local Мост app. The extension keeps only two values in the browser: whether Мост is on and which profile was used last.</p>
+
+  <h2>What goes over the network</h2>
+  <ul>
+    <li>Traffic of your tabs to the server you chose, while Мост is on.</li>
+    <li>A test request to https://example.com/ through that server when you check the connection, and once after turning Мост on.</li>
+    <li>A request for the SSH server key at the address you entered, when you press “Get server fingerprint”.</li>
+  </ul>
+  <p>Мост contacts nothing else: no analytics, telemetry, update checks or servers of ours.</p>
+
+  <h2>Who receives data</h2>
+  <p>Nobody. The developer receives no data; nothing is shared with or sold to third parties. The server country comes from the built-in DB-IP database, without network requests.</p>
+
+  <h2>Deleting data</h2>
+  <p>Delete profiles on the Мост page, or the “Мост — профили браузера” item in Keychain Access. Removing the extension from the browser removes its settings.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about data: marshchekov@gmail.com</p>
+</section>
+</main>
+</body>
+</html>
